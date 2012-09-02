@@ -96,9 +96,9 @@ public class ChooseMatrixDialog extends JDialog {
 										Matrix.class, null, dim, dim, -1, 
 										"self*self'\"==one("+dim+")"));
 			listModel.removeAll();
-			Enumeration enum = varAuthority.getElementsInCategory("unitary");
-			while (enum.hasMoreElements()) {
-			    listModel.add(enum.nextElement());
+			Enumeration<String> enumeration = varAuthority.getElementsInCategory("unitary");
+			while (enumeration.hasMoreElements()) {
+			    listModel.add(enumeration.nextElement());
 			}
 		    }
 		    catch (Exception excep) {
