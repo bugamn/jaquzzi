@@ -1,6 +1,5 @@
 package mathlib;
 import qsymbol2.OutputFile;
-import edu.buffalo.fs7.comphys.*;
 
 public class GnuBuddy {
 
@@ -13,7 +12,8 @@ public class GnuBuddy {
 
 	    for (int j = 0; j < 5; j++) {
 		for (int i = 0; i < 4; i++) {
-		    of.print("load '"+s[1]+(j*5+i)".fid"+"'\n");
+			// TODO made a fix here, might have broken, I don't know what was the original purpose
+		    of.print("load '"+s[1]+(j*5+i)+".fid"+"'\n");
 		}
 	    }
 	    of.close();
@@ -26,7 +26,8 @@ public class GnuBuddy {
 
 	    for (int j = 0; j < 5; j++) {
 		for (int i = 0; i < 4; i++) {
-		    of.print("load '"+s[1]+(j*5+i)".prob"+"'\n");
+			// TODO made a fix here, might have broken, I don't know what was the original purpose
+		    of.print("load '"+s[1]+(j*5+i)+".prob"+"'\n");
 		}
 	    }
 	    of.close();
