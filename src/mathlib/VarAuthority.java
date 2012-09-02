@@ -45,7 +45,7 @@ public class VarAuthority {
     /** exclusive mode */
     protected boolean exclusiveMode;
     /** keeps record on priority of groups (first come first serve) */
-    protected Vector priority;
+    protected Vector<String> priority;
 
     /**
      * creates a VarAuthority object for a certain Mathlib object. The exclusive mode allows
@@ -57,7 +57,7 @@ public class VarAuthority {
 	this.mathlib = mathlib;
 	this.exclusiveMode = exclusiveMode;
 	categories = new Hashtable();
-	priority = new Vector();
+	priority = new Vector<String>();
 	varsAssigned = new Vector();
     }	
 
@@ -157,11 +157,11 @@ public class VarAuthority {
      * @return category name or null if no match
      */
     public String whichCategory(String variable, String subCategory) {
-	Enumeration enum = priority.elements();
+	Enumeration<String> enumeration = priority.elements();
 	String categoryName = null;
 
-	while (enum.hasMoreElements()) {
-	    categoryName = (String) enum.nextElement();
+	while (enumeration.hasMoreElements()) {
+	    categoryName = enumeration.nextElement();
 
 	    // ok...insert!
 	    if (isObjectInCategory(variable, subCategory, categoryName)) {
