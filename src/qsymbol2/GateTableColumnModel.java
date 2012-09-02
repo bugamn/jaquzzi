@@ -119,9 +119,9 @@ public class GateTableColumnModel extends DefaultTableColumnModel {
 	TableColumn bColumn;
 	int columns;
 	int newColumnWidth = (((columnWidth + delta) > 15) ? (columnWidth+delta):columnWidth);
-	Enumeration enum = getColumns();
-	while(enum.hasMoreElements()) {
-	    bColumn = (TableColumn)enum.nextElement();
+	Enumeration enumeration = getColumns();
+	while(enumeration.hasMoreElements()) {
+	    bColumn = (TableColumn)enumeration.nextElement();
 	    columns = bColumn.getPreferredWidth()/columnWidth;
 	    bColumn.setPreferredWidth(newColumnWidth*columns);
 	}

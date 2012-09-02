@@ -918,10 +918,10 @@ public class GateTable extends JTable implements StepHandler, MathlibEventListen
 		of.print(g.getFullName() + "=" +g.getGate().toString() + "\n");
 	    }
 	    else {
-		Enumeration enum = g.getLeaves();
+		Enumeration enumeration = g.getLeaves();
 		GateContainer gateContainer;
-		while (enum.hasMoreElements()) {
-		    gateContainer = (GateContainer)enum.nextElement();
+		while (enumeration.hasMoreElements()) {
+		    gateContainer = (GateContainer)enumeration.nextElement();
 		    of.print(gateContainer.getFullName() + "=" +gateContainer.getGate().toString() + "\n");
 		}
 	    }

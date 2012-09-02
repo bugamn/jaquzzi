@@ -66,7 +66,7 @@ public class QubitHeaderRenderer extends JPanel implements TableCellRenderer {
 	
 		GateContainer rootContainer = 
 		    ((GateTableModel)table.getModel()).getGateContainer(columnName);
-		Enumeration enum;
+		Enumeration enumeration;
 		JLabel label;
 		GateContainer container;
 		int j = 0;
@@ -76,11 +76,11 @@ public class QubitHeaderRenderer extends JPanel implements TableCellRenderer {
 		Object o;
 		int depth = ((GateTable)table).getMaxContainerDepth();
 		for (int i = 0; i <= depth; i++) {
-		    enum = rootContainer.getChildsOnLevel(i);
+		    enumeration = rootContainer.getChildsOnLevel(i);
 		    j = 0;
-		    while(enum.hasMoreElements()) {
+		    while(enumeration.hasMoreElements()) {
 			j++;
-			o = enum.nextElement();
+			o = enumeration.nextElement();
 			if (o instanceof String)
 			    x++;
 			else {
