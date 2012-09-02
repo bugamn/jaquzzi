@@ -110,10 +110,10 @@ public class GateContainer implements Steppable{
      * @return true if child
      */
     public boolean containsGateContainer(String name) {
-	Enumeration enum = getLeaves();
+	Enumeration enumeration = getLeaves();
 	boolean cont = false;
-	while (enum.hasMoreElements() && cont == false){
-	    if (name.equals(((GateContainer)enum.nextElement()).getFullName())) 
+	while (enumeration.hasMoreElements() && cont == false){
+	    if (name.equals(((GateContainer)enumeration.nextElement()).getFullName())) 
 		cont = true;
 	}
 	return cont;
@@ -227,11 +227,11 @@ public class GateContainer implements Steppable{
      * removes a leaf container specified by name
      */
     public void removeLeafGateContainer(String name) {
-	Enumeration enum = getLeaves();
+	Enumeration enumeration = getLeaves();
 	boolean cont = false;
 	GateContainer gateContainer = null;
-	while (enum.hasMoreElements() && cont == false){
-	    gateContainer = (GateContainer)enum.nextElement();
+	while (enumeration.hasMoreElements() && cont == false){
+	    gateContainer = (GateContainer)enumeration.nextElement();
 	    if (name.equals(gateContainer.getFullName())) cont = true;
 	}
 	if (cont) {
