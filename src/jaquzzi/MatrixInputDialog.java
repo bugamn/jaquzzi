@@ -30,6 +30,7 @@ import mathlib.BinaryOp;
 import mathlib.Complex;
 import mathlib.Matrix;
 import mathlib.Parse;
+import mathlib.OneMap;
 
 import java.awt.*;
 import java.awt.event.*;
