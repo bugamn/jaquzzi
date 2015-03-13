@@ -1,0 +1,1 @@
+An rewriting of the Interactive Quantum Simulator by Felix Schuermann (http://www.eng.buffalo.edu/~phygons/jaQuzzi/jaQuzzi.html) in order to work with recent versions of Java.
